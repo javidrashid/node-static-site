@@ -1,0 +1,206 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+        link(rel='stylesheet', href='/stylesheets/bootstrap-theme.css')
+        script(type='text/javascript', src='/javascripts/jQuery.js')
+        script(type='text/javascript', src='/javascripts/bootstrap.min.js')
+        script(type='text/javascript', src='javascripts/custom.js')
+        link(rel='stylesheet', href='/stylesheets/moveme.css')
+    body
+        block content
+        nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+            .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='/') MoveMe
+            .navbar-collapse.collapse
+                ul.nav.navbar-nav
+                    li.active
+                        a(href='index') Home
+                    li
+                        a(href='blog') Blog
+                    li
+                        a(href='clients') Clients
+                    li
+                        a(href='contact') Contact
+                    li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown')
+                            | Social
+                            b.caret
+                        ul.dropdown-menu
+                            li
+                                a(href='http://www.facebook.com') Facebook
+                            li
+                                a(href='http://www.twitter.com') Twitter
+                            li
+                                a(href='https://plus.google.com') Google+
+                            li
+                                a(href='http://www.linkedin.com') LinkedIn
+.intro-block
+    .container
+        .row
+            .col-xs-3
+                img.img-responsive.tpad(src='images/moveMe.png')
+            .col-xs-9
+                h1
+                    | MOVE ME
+                    span.text-muted » Contact Us
+                p.lead
+                    | We work with some of the biggest companies in the world, take a look for yourself.
+// End Intro Text
+.map
+    iframe(width='100%', height='100%', frameborder='0', scrolling='no', marginheight='0', marginwidth='0', src='https://maps.google.ca/maps?f=q&source=s_q&hl=en&geocode=&q=200+Trafalgar+Rd,+Oakville,+ON&aq=0&oq=200+trafalgar&sll=43.447946,-79.624382&sspn=0.321037,0.617294&ie=UTF8&hq=&hnear=200+Trafalgar+Rd,+Oakville,+Ontario+L6J+3G7&t=m&z=14&ll=43.449604,-79.670214&output=embed')
+    br
+.container
+    .row
+        .col-lg-12
+            small
+                a(href='https://maps.google.ca/maps?f=q&source=embed&hl=en&geocode=&q=200+Trafalgar+Rd,+Oakville,+ON&aq=0&oq=200+trafalgar&sll=43.447946,-79.624382&sspn=0.321037,0.617294&ie=UTF8&hq=&hnear=200+Trafalgar+Rd,+Oakville,+Ontario+L6J+3G7&t=m&z=14&ll=43.449604,-79.670214', style='color:#0000FF;text-align:left') View Larger Map
+.container.padded
+    .row
+        .col-sm-8
+            h2 Get in touch
+            hr
+            p
+                | Need a quote, enquiry about our team creating your App or have a suggestion for the
+                strong Move Me
+                | App, we need to hear from you:
+            form.form-horizontal.tpad(role='form')
+                .form-group
+                    label.col-lg-2.control-label(for='email') Email
+                    .col-lg-10
+                        input#email.form-control(type='email', placeholder='Email')
+                .form-group.tpad
+                    label.col-lg-2.control-label(for='message') Message
+                    .col-lg-10
+                        textarea#message.form-control(rows='6', placeholder='Message...')
+                .form-group.tpad
+                    .col-lg-offset-2.col-lg-10
+                        a.btn.btn-default.btn-lg(data-toggle='modal', href='#myModal') Send
+        #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                        h3.modal-title Thank you for submitting
+                    .modal-body
+                        p
+                            | We appreciate you getting in touch. Please be patient, we will contact you shortly with a reply.
+                        p The MoveMe Team
+                    .modal-footer
+                        a.btn.btn-default.btn-lg(href='/') OK
+        .col-sm-4
+            img.img-circle.img-responsive(src='images/office.jpg')
+            hr
+            address
+                h3 MoveMe Inc.
+                | 200 Trafalgar Road
+                br
+                | Oakville, ON M6L 6Y9
+                br
+                a(href='mailto: first.last@moveme.com') hello@moveme.com
+                br
+                abbr(title='Phone') P:
+                | 906 123-4567
+// End Page Content
+.marketing
+    .container
+        .row
+            .col-sm-6
+                img.img-responsive(src='images/app.png')
+            .col-sm-6
+                h3.tpad ALWAYS ON HAND
+                hr
+                p
+                    | Download the App for your device now and try it for yourself. No matter how regularly you make a journey this App will completely change the way you travel.
+                p
+                    a.btn.btn-large.btn-primary(href='#') Get it now!
+// End Marketing Section
+.info
+    .container
+        .row
+            .col-sm-6.tabbable
+                // Tabs go here
+                ul#myTab.nav.nav-tabs
+                    li.active
+                        a(href='#android', data-toggle='tab') Android
+                    li
+                        a(href='#bb', data-toggle='tab') Blackberry
+                    li
+                        a(href='#ios', data-toggle='tab') iOS
+                    li
+                        a(href='#win', data-toggle='tab') Windows
+                .tab-content
+                    #android.tab-pane.fade.in.active
+                        p
+                            img.pull-right(src='images/gplay.jpg', alt='google')
+                            | Android... Donec eget sem lacus. Morbi vitae viverra metus. Duis gravida sapien in hendrerit ultricies. Maecenas in vestibulum lectus. Pellentesque eleifend feugiat tincidunt.
+                            br
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star-empty
+                    #bb.tab-pane.fade.in
+                        p
+                            img.pull-right(src='images/bbstore.jpg', alt='google')
+                            | Blackberry... Donec eget sem lacus. Morbi vitae viverra metus. Duis gravida sapien in hendrerit ultricies. Maecenas in vestibulum lectus. Pellentesque eleifend feugiat tincidunt.
+                            br
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star-empty
+                    #ios.tab-pane.fade.in
+                        p
+                            img.pull-right(src='images/appstore.jpg', alt='google')
+                            | iOS... Donec eget sem lacus. Morbi vitae viverra metus. Duis gravida sapien in hendrerit ultricies. Maecenas in vestibulum lectus. Pellentesque eleifend feugiat tincidunt.
+                            br
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star-empty
+                    #win.tab-pane.fade.in
+                        p
+                            img.pull-right(src='images/winstore.jpg', alt='google')
+                            | Windows... Donec eget sem lacus. Morbi vitae viverra metus. Duis gravida sapien in hendrerit ultricies. Maecenas in vestibulum lectus. Pellentesque eleifend feugiat tincidunt.
+                            br
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star
+                            span.glyphicon.glyphicon-star-empty
+            .col-sm-4.col-sm-offset-2
+                // Quote go here
+                blockquote
+                    p
+                        | “This App has completely revolutionized the way we travel, we will never have to wait around in the rain for transport, we can time our day perfectly. I don't know how I ever lived without it.”
+                    small
+                        | James T. Kirk,
+                        cite(title='source title') Starship Enterprise
+// info panel end
+.ftr
+    .container
+        .row
+            footer
+                .pull-left.ft_space
+                    address
+                        h3 MoveMe Inc.
+                        | 200 Trafalgar Road
+                        br
+                        | Oakville, ON M6L 6Y9
+                        br
+                        a(href='mailto: first.last@moveme.com') hello@moveme.com
+                        br
+                        abbr(title='Phone') P:
+                        | 906 123-4567
+                .pull-right.ft_space
+                    img.img-responsive(src='images/moveMe.png')
+                    p © MoveMe Inc. 2013
